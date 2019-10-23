@@ -1,10 +1,10 @@
 const initModel = {
-    description: 'FP with JavaScrip',
-    calories: 290,
+    title: 'FP with JavaScrip',
+    price: 290,
     showForm: false,
     nextId: 0,
     editId: null,
-    meals: []
+    books: []
 }
 
 export default initModel;

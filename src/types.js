@@ -1,6 +1,6 @@
 export const SHOW_FORM = 'SHOW_FORM';
-export const MEAL_INPUT = 'MEAL_INPUT';
-export const CALORIES_INPUT = 'CALORIES_INPUT';
-export const SAVE_MEAL = 'SAVE_MEAL';
-export const DELETE_MEAL = 'DELETE_MEAL';
-export const EDIT_MEAL = 'EDIT_MEAL';
+export const TITLE_INPUT = 'TITLE_INPUT';
+export const PRICE_INPUT = 'PRICE_INPUT';
+export const SAVE_BOOK = 'SAVE_BOOK';
+export const DELETE_BOOK = 'DELETE_BOOK';
+export const EDIT_BOOK = 'EDIT_BOOK';

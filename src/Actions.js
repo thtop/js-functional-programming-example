@@ -1,4 +1,4 @@
-import { SHOW_FORM, MEAL_INPUT, CALORIES_INPUT, SAVE_MEAL, DELETE_MEAL, EDIT_MEAL } from './types';
+import { SHOW_FORM, TITLE_INPUT, PRICE_INPUT, SAVE_BOOK, DELETE_BOOK, EDIT_BOOK } from './types';
 
 export function showFormMsg(showForm) {
     return {
@@ -7,34 +7,34 @@ export function showFormMsg(showForm) {
     }
 }
 
-export function mealInputMsg(description) {
+export function titleInputMsg(title) {
     return {
-        type: MEAL_INPUT,
-        description
+        type: TITLE_INPUT,
+        title
     }
 }
 
-export function caloriesInputMsg(calories) {
+export function priceInputMsg(price) {
     return {
-        type: CALORIES_INPUT,
-        calories
+        type: PRICE_INPUT,
+        price
     }
 }
 
-export const saveMealMsg = {
-    type: SAVE_MEAL
+export const saveBookMsg = {
+    type: SAVE_BOOK
 }
 
-export function deleteMealMsg(id) {
+export function deleteBookMsg(id) {
     return {
-        type: DELETE_MEAL,
+        type: DELETE_BOOK,
         id
     }
 }
 
-export function editMealMsg(editId) {
+export function editBookMsg(editId) {
     return {
-        type: EDIT_MEAL,
+        type: EDIT_BOOK,
         editId
     }
 }
