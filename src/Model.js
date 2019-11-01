@@ -1,5 +1,5 @@
 const initModel = {
-    title: 'FP with JavaScrip',
+    title: 'JavaScript',
     price: 290,
     showForm: false,
     nextId: 0,

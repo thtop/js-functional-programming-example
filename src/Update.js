@@ -1,7 +1,6 @@
 import * as R from 'ramda';
 import { SHOW_FORM, TITLE_INPUT, PRICE_INPUT, SAVE_BOOK, DELETE_BOOK, EDIT_BOOK } from './types';
 
-
 function update(msg, model) {
     switch (msg.type) {
         case SHOW_FORM: {
@@ -18,13 +17,14 @@ function update(msg, model) {
         }
         case SAVE_BOOK: {
             const { editId } = model;
+            console.log(editId);
             const updatedModel = editId !== null ? edit(msg, model) : add(msg, model);
             return updatedModel;
         }
         case DELETE_BOOK: {
             const { id } = msg;
             const books = R.filter(book => book.id !== id, model.books);
-            return { ...model, books }
+            return { ...model, books, title: '', price: 0, showForm: false }
         }
         case EDIT_BOOK: {
             const { editId } = msg;
@@ -37,18 +37,20 @@ function update(msg, model) {
     }
 }
 
+
 function add(msg, model) {
-    const { title, price, nextId } = model;
+    const { nextId, title, price } = model;
     const book = { id: nextId, title, price };
     const books = [...model.books, book];
+
     return { ...model, books, title: '', price: 0, nextId: nextId + 1, showForm: false }
 }
 
 function edit(msg, model) {
-    const { title, price, editId } = model;
+    const { editId, title, price } = model;
     const books = R.map(book => {
         if (book.id === editId) {
-            return { ...book, title, price };
+            return { ...book, title, price }
         }
         return book;
     }, model.books);

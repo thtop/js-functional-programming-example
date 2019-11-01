@@ -21,9 +21,7 @@ export function priceInputMsg(price) {
     }
 }
 
-export const saveBookMsg = {
-    type: SAVE_BOOK
-}
+export const saveBookMsg = { type: SAVE_BOOK };
 
 export function deleteBookMsg(id) {
     return {
